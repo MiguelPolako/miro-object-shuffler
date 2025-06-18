@@ -3,9 +3,5 @@
   "name": "Object Shuffler",
   "description": "Randomly shuffle selected objects on the board.",
   "permissions": ["boards:read", "boards:write"],
-  "startPage": "/index.html",
-  "icons": {
-    "outline": "icon-outline.svg",
-    "color": "icon-color.svg"
-  }
+  "startPage": "/index.html"
 }
