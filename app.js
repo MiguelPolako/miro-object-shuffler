@@ -16,6 +16,9 @@ async function init() {
         
         await miro.ready();
         console.log('Miro SDK ready');
+
+          // 👉 this line forces app to open in sidebar
+  await miro.board.ui.openPanel({ url: 'index.html' });
         
         // Set up event listeners
         setupEventListeners();
