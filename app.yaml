@@ -1,0 +1,13 @@
+# Miro app configuration
+appName: Object Shuffler
+sdkVersion: v2
+buildCommand: echo "No build required"
+redirectUris:
+  - http://localhost:5000/
+  - https://*.replit.app/
+scopes:
+  - boards:read
+  - boards:write
+permissions:
+  - board:read
+  - board:write
