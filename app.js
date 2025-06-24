@@ -7,26 +7,23 @@ async function init() {
     console.log('Object Shuffler app initializing...');
     
     try {
-        // Check if we're running inside Miro
         if (typeof miro === 'undefined') {
             console.log('Running outside Miro - demo mode');
             setupDemoMode();
             return;
         }
-        
+
         await miro.ready();
         console.log('Miro SDK ready');
 
-          // 👉 this line forces app to open in sidebar
-  //await miro.board.ui.openPanel({ url: 'index.html' });
-        
-        // Set up event listeners
+        // 🚫 Don't call openPanel from inside the panel
+        // await miro.board.ui.openPanel({ url: 'index.html' });
+
         setupEventListeners();
-        
-        // Start monitoring selection changes
         monitorSelection();
-        
         console.log('App initialized successfully');
+        showStatus('App ready. Select objects to shuffle.', 'success');
+
     } catch (error) {
         console.error('Failed to initialize app:', error);
         showStatus('Failed to initialize app', 'error');
