@@ -1,7 +1,24 @@
 {
-  "sdkVersion": "2.0",
-  "name": "Object Shuffler",
-  "description": "Randomly shuffle selected objects on the board.",
-  "permissions": ["boards:read", "boards:write"],
-  "startPage": "/index.html"
+  "appName": "Object Shuffler",
+  "sdkVersion": "SDK_V2",
+  "sdkUri": "https://miro-object-shuffler.vercel.app",
+  "redirectUriForSdk": "https://miro-object-shuffler.vercel.app",
+  "redirectUris": [
+    "https://miro-object-shuffler.vercel.app"
+  ],
+  "boardPicker": {
+    "allowedDomains": [
+      "miro-object-shuffler.vercel.app"
+    ]
+  },
+  "scopes": [
+    "boards:read",
+    "boards:write"
+  ],
+  "icons": {
+    "colored": "https://miro-object-shuffler.vercel.app/icon-color.svg",
+    "outline": "https://miro-object-shuffler.vercel.app/icon-outline.svg"
+  },
+  "supportUrl": "https://github.com/MiguelPolako/miro-object-shuffler/issues",
+  "privacyPolicyUrl": "https://miro-object-shuffler.vercel.app/privacy-policy"
 }
