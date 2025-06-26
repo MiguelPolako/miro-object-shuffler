@@ -22,7 +22,16 @@ async function init() {
         setupEventListeners();
         monitorSelection();
         console.log('App initialized successfully');
-        showStatus('App ready. Select objects to shuffle.', 'success');
+        function showStatus(message, type = 'success') {
+  const statusMessage = document.getElementById('statusMessage');
+  statusMessage.textContent = message;
+  statusMessage.className = `status-message ${type} show`;
+
+  setTimeout(() => {
+    statusMessage.classList.remove('show');
+  }, 4000);
+}
+
 
     } catch (error) {
         console.error('Failed to initialize app:', error);
